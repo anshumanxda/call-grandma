@@ -33,7 +33,7 @@ def sendmail():
 
 # Cron job for sending email every 10 days
 
-schedule.every(10).seconds.do(sendmail)
+schedule.every(10).days.do(sendmail)
 while 1:
     schedule.run_pending()
     time.sleep(1)
